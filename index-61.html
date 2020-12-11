@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AMAC | I am</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Your description">
+<meta name="keywords" content="Your keywords">
+<meta name="author" content="Your name">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen">  
+<link rel="stylesheet" href="css/supersized.core.css" type="text/css" media="screen">  
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" type="text/css" href="css/styleIndex.css">
+
+<script type="text/javascript" src="js/jquery.js"></script>  
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>
+
+<script type="text/javascript" src="js/supersized.core.3.2.1.js"></script>
+
+<script>
+	
+	 function myfunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+$(document).ready(function() {
+	/////// icons
+	//$(".social li").find("a").css({opacity:0.6});
+	$(".social li a").hover(function() {
+		$(this).stop().animate({opacity:0.6 }, 400, 'easeOutExpo');		    
+	},function(){
+	    $(this).stop().animate({opacity:1 }, 400, 'easeOutExpo' );		   
+	}); 
+
+	
+
+}); //
+$(window).load(function() {
+	//
+
+}); //
+</script>	
+<style type="text/css">
+	.header {
+		background-color: rgba(244, 249, 250, 0.938);
+		background-image: url(img/181.jpeg);
+		height: 70px;
+		padding-left: 20px;
+		padding-top: 20px;
+
+		color: rgb(68, 68, 88);
+		font-family: 'Quicksand';
+		font-size: 50px;
+		font-weight: bold;
+		text-transform: lowercase;
+
+	}
+
+	font:hover {
+		color: rgb(33, 33, 39);
+		animation: w3-effect 4s 1;
+	}
+
+</style>
+<style>
+	.btn{
+		border: 2px solid black;
+		background-color: white;
+		color: black;
+		padding: 14px 28px;
+		font-size: 16px;
+		cursor: pointer;
+	}
+	.next{
+		border-color: #2196F3;
+		color: dodgerblue;
+	}
+	.next:hover{
+		background: #2196F3;
+		color: white;
+	}
+</style>
+</head>
+
+<body class="subpage">
+<div id="main">
+
+<header>
+<div class="container">
+<div class="row">
+<div class="span12">
+	<div class="header_inner clearfix">
+		<div class="top1"><a href="index.html" class="logo">AMAC <span>| I Am</span></a></div>
+		<div class="top2">
+			<div class="menu_top">
+		        <ul id="menu_top" class="clearfix">
+		          <li><a href="index.html">HOME</a></li>         
+		          <li><a href="mailto:mail@companyname.com">CONTACT US</a></li>          
+		        </ul>
+			</div>
+		</div>
+	</div>
+</div>	
+</div>	
+</div>	
+</header>
+<div id="content">
+<div class="container">
+<div class="row">
+	<form name="quiz">
+            <center>
+            <div style="padding: 1%;font-family: helvetica; font-size: 25px;">
+                6. You rarely get carried away by fantasies and ideas.<br>
+                Agree<input style="margin-left: 10px;margin-top: 1%;" type="radio" name="q1" value="in" id="q1s">
+                <input style="margin-left: 5%;margin-top: 1%;" type="radio" name="q1" value="ex" id="q1i">Disagree<br>
+            </div>
+            <div style="padding: 1%;font-family: helvetica;font-size: 25px;">
+                7. You often find yourself lost in thought when you are walking in nature.<br>
+                Agree<input style="margin-left: 10px;margin-top: 1%;" type="radio" name="q2" value="ex" id="q2i">
+                <input style="margin-left: 5%;margin-top: 1%;" type="radio" name="q2" value="in" id="q2s">Disagree<br>
+            </div>
+            <div style="padding: 1%;font-family: helvetica;font-size: 25px;">
+                8. You do not let other people influence your actions.<br>
+                Agree<input style="margin-left: 10px;margin-top: 1%;" type="radio" name="q3" value="ex" id="q3s">
+                <input style="margin-left: 5%;margin-top: 1%;" type="radio" name="q3" value="in" id="q3i">Disagree<br>
+            </div>
+            <div style="padding: 1%;font-family: helvetica;font-size: 25px;">
+                9. Your dreams tend to focus on the real world and its events.<br>
+                Agree<input style="margin-left: 10px;margin-top: 1%;" type="radio" name="q4" value="in" id="q4s">
+                <input style="margin-left: 5%;margin-top: 1%;" type="radio" name="q4" value="ex" id="q4i">Disagree<br>
+            </div>
+            <div style="padding: 1%;font-family: helvetica;font-size: 25px;">
+                10. Logic is usually more important than heart when it comes to making important decisions.<br>
+                Agree<input style="margin-left: 10px;margin-top: 1%;" type="radio" name="q5" value="in" id="q5s">
+                <input style="margin-left: 5%;margin-top: 1%;" type="radio" name="q5" value="ex" id="q5i">Disagree<br>
+            </div>
+        </center>
+        </div>
+        </div>
+    </form>
+
+
+    <p style="padding: 1%">
+        <center><button class="btn next" style="font-size: 25px;"onclick="validate()">Next</button></center>
+    </p>
+
+
+    <script>
+        sessionStorage.s = 0;
+        sessionStorage.in = 0;
+
+        function op() {
+            window.open("index-62.html", "_self");
+        }
+
+        function myFunction() {
+            if (document.getElementById('q1s').checked) {
+                sessionStorage.s++;
+            }
+            if (document.getElementById('q1i').checked) {
+                sessionStorage.in++;
+            }
+            if (document.getElementById('q2s').checked) {
+                sessionStorage.s++;
+            }
+            if (document.getElementById('q2i').checked) {
+                sessionStorage.in++;
+            }
+            if (document.getElementById('q3s').checked) {
+                sessionStorage.s++;
+            }
+            if (document.getElementById('q3i').checked) {
+                sessionStorage.in++;
+            }
+            if (document.getElementById('q4s').checked) {
+                sessionStorage.s++;
+            }
+            if (document.getElementById('q4i').checked) {
+                sessionStorage.i++;
+            }
+            if (document.getElementById('q5s').checked) {
+                sessionStorage.s++;
+            }
+            if (document.getElementById('q5i').checked) {
+                sessionStorage.i++;
+            }
+        }
+
+        function validate() {
+            if (!(document.getElementById('q1s').checked) && !(document.getElementById('q1i').checked)) {
+                alert("Please select an answer for the question 6!!!");
+                return false;
+            } else if (!(document.getElementById('q2s').checked) && !(document.getElementById('q2i').checked)) {
+                alert("Please select an answer for the question 7!!!");
+                return false;
+            } else if (!(document.getElementById('q3s').checked) && !(document.getElementById('q3i').checked)) {
+                alert("Please select an answer for the question 8!!!");
+                return false;
+            } else if (!(document.getElementById('q4s').checked) && !(document.getElementById('q4i').checked)) {
+                alert("Please select an answer for the question 9!!!");
+                return false;
+            } else if (!(document.getElementById('q5s').checked) && !(document.getElementById('q5i').checked)) {
+                alert("Please select an answer for the question 10!!!");
+                return false;
+            }
+            myFunction();
+            op();
+        }
+
+    </script>
+</div>	
+</div>	
+</div>
+
+
+	<div class="copyright">
+		Copyright © 2020.All rights reserved.  |    <a href="#">Privacy Policy</a>
+	</div>
+
+
+
+
+
+
+</div>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

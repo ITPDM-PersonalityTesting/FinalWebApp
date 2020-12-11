@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AMAC | I am</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Your description">
+<meta name="keywords" content="Your keywords">
+<meta name="author" content="Your name">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen">  
+<link rel="stylesheet" href="css/supersized.core.css" type="text/css" media="screen">  
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+
+<script type="text/javascript" src="js/jquery.js"></script>  
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>
+
+<script type="text/javascript" src="js/supersized.core.3.2.1.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Quicksand|Pacifico|Play|Cinzel|Courgette|Lato" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/">
+    <script>
+        $(document).ready(function() {
+            /////// icons
+            //$(".social li").find("a").css({opacity:0.6});
+            $(".social li a").hover(function() {
+                $(this).stop().animate({opacity:0.6 }, 400, 'easeOutExpo');		    
+            },function(){
+                $(this).stop().animate({opacity:1 }, 400, 'easeOutExpo' );		   
+            }); 
+        
+            
+        
+        }); //
+        $(window).load(function() {
+            //
+        
+        }); //
+        </script>	
+    <script>
+        function myfunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+    </script>
+    <style type="text/css">
+        * {
+            margin: auto;
+        }
+
+        .header {
+            /*background-color: rgba(244, 249, 250, 0.938);*/
+            background-image: url(img/181.jpeg);
+            height: 70px;
+            padding-left: 20px;
+            padding-top: 20px;
+            color: rgb(68, 68, 88);
+            font-family: 'Quicksand';
+            font-size: 50px;
+            font-weight: bold;
+            text-transform: lowercase;
+
+        }
+
+        font:hover {
+            color: rgb(33, 33, 39);
+            animation: w3-effect 4s 1;
+        }
+
+  
+        .blogs {
+            background-color: rgb(31, 30, 50);
+            float: left;
+            width: 240px;
+            margin-top: 30px;
+            margin-left: 85px;
+            height: 200px;
+            border-radius: 30px;
+            border: solid 1px white;
+            color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .blogs:hover {
+            width: 250px;
+            height: 230px;
+            background-color: rgb(182, 189, 190);
+            color: navy;
+            animation: w3-spin 2s 1;
+        }
+
+        @keyframes w3-spin {
+            100% {
+
+                border-radius: 50%;
+            }
+
+
+        }
+
+        .center1 {
+            min-height: 500px;
+            padding-left: 25px;
+            padding-top: 50px;
+            font-size: 40px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+            color: #e2dbdb;
+            z-index: 2;
+            background-color: rgb(21, 32, 25);
+            background-image: url("img/img3.jpg");
+            background-repeat: no-repeat, repeat;
+
+        }
+
+        .center {
+            height: 680px;
+
+            margin-top: 0px;
+            padding-top: 50px;
+            font-size: 30px;
+            font-family: 'Lato';
+            text-align: center;
+            color: #f1f1f1;
+            background-image: url("img/img7.jpg");
+            z-index: 2;
+
+
+        }
+
+        .w3-animate-fading {
+            animation: fading 5s infinite;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        @keyframes fading {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .w3-animate-left {
+            position: relative;
+            animation: animateleft 1s 1;
+        }
+
+        @keyframes animateleft {
+            from {
+                left: -100px;
+                opacity: 1
+            }
+
+            to {
+                left: 0;
+                opacity: 1
+            }
+        }
+
+        .w3-animate-down {
+            position: relative;
+            animation: animatedown 1s 1;
+        }
+
+        @keyframes animatedown {
+            from {
+                top: -100px;
+                opacity: 0;
+
+            }
+
+            to {
+                top: 5px;
+                opacity: 1;
+            }
+        }
+
+        .dropbtn {
+            background-color: white;
+            font-size: 30px;
+            border: solid 2px rgb(15, 26, 36);
+            border-radius: 5px;
+            cursor: pointer;
+            float: left;
+            margin-right: 5px;
+            text-decoration: none;
+        }
+
+        .d1 {
+            min-width: 100px;
+            height: 50px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 30px;
+            font-family: 'Lato';
+            color: white;
+
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            float: left;
+
+        }
+
+        .d2 {
+            background-color: rgb(113, 121, 115);
+            height: 40px;
+            border: solid 1px white;
+            padding: 10px 10px 10px 10px;
+            font-size: 30px;
+        }
+
+        /*.d2:hover{
+
+    background-color: rgb(65, 62, 62);
+}
+*/
+        .dropbtn1 {
+            border-radius: 50%;
+            margin-left: 48%;
+            border: solid 3px rgb(15, 26, 36);
+            float: unset;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(158, 158, 194);
+        }
+
+        .dropbtn1:hover {
+            background-color: rgb(68, 201, 97);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 80px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        label {
+            font-size: 20px;
+            color: black;
+            padding: 5px;
+        }
+
+        input {
+            width: 200px;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .search {
+
+            float: left;
+
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body style="background-image: url(img/18.jpeg);">
+    <header>
+        <div class="container">
+        <div class="row">
+        <div class="span12">
+            <div class="header_inner clearfix">
+		<div class="top1"><a href="index.html" class="logo">AMAC <span>| I Am</span></a></div>
+		<div class="top2">
+			<div class="menu_top">
+		        <ul id="menu_top" class="clearfix">
+		          <li><a href="index.html">HOME</a></li>         
+		          <li><a href="mailto:mail@companyname.com">CONTACT US</a></li>          
+		        </ul>
+			</div>
+		</div>
+	</div>
+        </div>	
+        </div>	
+        </div>	
+        </header>
+        <div id="navigation" class="container">
+        <div class="row">
+       <div class="span12">
+	<ul class="menu menu1 row sf-menu clearfix">
+      <li class="nav1 span3"><a href="index-1.html"><span class="over1"></span><span class="over2"></span><span class="ic1"></span><span class="txt1">01</span><span class="txt2">company</span></a></li>
+      <li class="nav2 span3"><a href="index-2.html"><span class="over1"></span><span class="over2"></span><span class="ic1"></span><span class="txt1">02</span><span class="txt2">job portal</span></a></li>
+      <li class="nav3 span3"><a href="index-3.html"><span class="over1"></span><span class="over2"></span><span class="ic1"></span><span class="txt1">03</span><span class="txt2">consulting</span></a></li>
+      <li class="nav4 span3 sub-menu sub-menu-1"><a href="index-4.html"><span class="over1"></span><span class="over2"></span><span class="ic1"></span><span class="txt1">04</span><span class="txt2">skill training</span></a>
+      </li>      										
+    </ul>
+    <ul class="menu menu2 row sf-menu clearfix">
+      <li class="nav5 span3"><a href="index-5.html"><span class="over1"></span><span class="over2"></span><span class="ic1"></span><span class="txt1">05</span><span class="txt2">support</span></a></li>
+      <li class="nav6 span3"><a href="index-6.html"><span class="over1"></span><span class="over2"></span><span class="ic1"></span><span class="txt1">06</span><span class="txt2">personality tesing</span></a></li>
+      <li class="nav7 span3"><a href="index-7.html"><span class="over1"></span><span class="over2"></span><span class="ic1"></span><span class="txt1">07</span><span class="txt2">motivation video</span></a></li>
+      <li class="nav8 span3"><a href="index-8.html"><span class="over1"></span><span class="over2"></span><span class="ic1"></span><span class="txt1">08</span><span class="txt2">contacts</span></a></li>      										
+    </ul>
+    <div class="hl1"></div>
+</div>		
+        </div>	
+        </div>
+        
+    
+    <div><br>
+        <hr width="2000px">
+        <h1 class="title" style="font-family: 'Unica One', cursive; text-align: center; color: white;">PERSONALITY TYPES</h1>
+        <hr width="2000px"><br>
+        <div class="flip-menu" style="width: 1000px;margin: 0 auto">
+            <!-- <div><h1 style="text-align: center;font-family: lato">Analysts</h1></div><br> -->
+            <div>
+                <div class="flip-item-wrap " style="margin-bottom: 40px;margin-right: 20px;margin-left:20px ">
+                    <img class="fake-image" src="img/intj.png" alt="">
+                    <input type="checkbox" class="flipper" id="a">
+                    <label for="a" class="flip-item">
+                        <figure class="front"><img src="img/intj.png" alt=""></img></figure>
+                        <figure class="back">
+
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Architect</h4>
+                                <p>Imaginative and strategic thinkers, with a plan for everything.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>INTJ</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px">
+                    <img class="fake-image" src="img/intp.png" alt="">
+                    <input type="checkbox" class="flipper" id="b">
+                    <label for="b" class="flip-item">
+                        <figure class="front"><img src="img/intp.png" alt=""></img></figure>
+                        <figure class="back">
+
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Logician</h4>
+                                <p>Innovative inventors with an unquenchable thirst for knowledge.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>INTP</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px">
+                    <img class="fake-image" src="img/entj.png" alt="">
+                    <input type="checkbox" class="flipper" id="c">
+                    <label for="c" class="flip-item">
+                        <figure class="front"><img src="img/entj.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Commander</h4>
+                                <p>Bold, imaginative and strong-willed leaders, always finding a way or making one.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ENTJ</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px"><img class=" fake-image" src="img/entp.png" alt="">
+                    <input type="checkbox" class="flipper" id="d">
+                    <label for="d" class="flip-item">
+                        <figure class="front"><img src="img/entp.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Debator</h4>
+                                <p>Smart and curious thinkers who cannot resist an intellectual challenge.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ENTP</h3>
+                </div>
+            </div>
+            <!-- <div><h1 style="text-align: center;font-family: lato">Diplomats</h1></div><br> -->
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px;margin-left:20px ">
+                    <img class="fake-image" src="img/infj.png" alt="">
+                    <input type="checkbox" class="flipper" id="e">
+                    <label for="e" class="flip-item">
+                        <figure class="front"><img src="img/infj.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Advocate</h4>
+                                <p>Quiet and mystical, yet vary inspiring and tireless idealist.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>INFJ</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px">
+                    <img class="fake-image" src="img/infp.png" alt="">
+                    <input type="checkbox" class="flipper" id="f">
+                    <label for="f" class="flip-item">
+                        <figure class="front"><img src="img/infp.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Mediator</h4>
+                                <p>Poetic, kind and altruistic people, always eager to help a good cause.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>INFP</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px">
+                    <img class="fake-image" src="img/enfj.png" alt="">
+                    <input type="checkbox" class="flipper" id="g">
+                    <label for="g" class="flip-item">
+                        <figure class="front"><img src="img/enfj.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Protagonist</h4>
+                                <p>Charismatic and inspiring leaders, able to mesmerize their listeners.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ENFJ</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px">
+                    <img class="fake-image" src="img/enfp.png" alt="">
+                    <input type="checkbox" class="flipper" id="h">
+                    <label for="h" class="flip-item">
+                        <figure class="front"><img src="img/enfp.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Campaigner</h4>
+                                <p>Enthusiastic, creative and sociable free spirits, who can always find a reason to smile.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ENFP</h3>
+                </div>
+            </div>
+            <!-- <div><h1 style="text-align: center;font-family: lato">Sentinels</h1></div><br> -->
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px;margin-left:20px ">
+                    <img class="fake-image" src="img/istj.png" alt="">
+                    <input type="checkbox" class="flipper" id="j">
+                    <label for="j" class="flip-item">
+                        <figure class="front"><img src="img/istj.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Logistician</h4>
+                                <p>Practical and fact-minded individuals, whose reliability cannot be doubted.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ISTJ</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px">
+                    <img class="fake-image" src="img/isfj.png" alt="">
+                    <input type="checkbox" class="flipper" id="k">
+                    <label for="k" class="flip-item">
+                        <figure class="front"><img src="img/isfj.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Defender</h4>
+                                <p>Very dedicated and warm protectors, always ready to defend their loved ones.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ISFJ</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px">
+                    <img class="fake-image" src="img/estj.png" alt="">
+                    <input type="checkbox" class="flipper" id="l">
+                    <label for="l" class="flip-item">
+                        <figure class="front"><img src="img/estj.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Executive</h4>
+                                <p>Excellent administrators, unsurpassed at managing things or people.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ESTJ</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px">
+                    <img class="fake-image" src="img/esfj.png" alt="">
+                    <input type="checkbox" class="flipper" id="m">
+                    <label for="m" class="flip-item">
+                        <figure class="front"><img src="img/esfj.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Consul</h4>
+                                <p>Extraordinarily caring, social and popular people, always eager to help.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ESFJ</h3>
+                </div>
+            </div>
+            <!-- <div><h1 style="text-align: center;font-family: lato">Explorers</h1></div><br> -->
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px;margin-left:20px ">
+                    <img class="fake-image" src="img/istp.png" alt="">
+                    <input type="checkbox" class="flipper" id="n">
+                    <label for="n" class="flip-item">
+                        <figure class="front"><img src="img/istp.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Virtuoso</h4>
+                                <p>Bold and practical experimenters, masters of all kind of tools.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ISTP</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px">
+                    <img class="fake-image" src="img/isfp.png" alt="">
+                    <input type="checkbox" class="flipper" id="o">
+                    <label for="o" class="flip-item">
+                        <figure class="front"><img src="img/isfp.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Adventurer</h4>
+                                <p>FLexible and charming artists, always ready to explore and experience something new.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ISFP</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px">
+                    <img class="fake-image" src="img/estp.png" alt="">
+                    <input type="checkbox" class="flipper" id="p">
+                    <label for="p" class="flip-item">
+                        <figure class="front"><img src="img/estp.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Entrepreneur</h4>
+                                <p>Smart, energetic and very perceptive poeple, who truly enjoy living on the edge.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ESTP</h3>
+                </div>
+            </div>
+            <div>
+                <div class="flip-item-wrap" style="margin-bottom: 40px;margin-right: 20px">
+                    <img class="fake-image" src="img/esfp.png" alt="">
+                    <input type="checkbox" class="flipper" id="q">
+                    <label for="q" class="flip-item">
+                        <figure class="front"><img src="img/esfp.png" alt=""></img></figure>
+                        <figure class="back">
+                            <div class="flip-item-desc">
+                                <h4 class="flip-item-title">Entertainer</h4>
+                                <p>Spontaneous, energetic and enthusiastic people - life is never boring around them.</p>
+                            </div>
+                        </figure>
+                    </label>
+                    <h3 style="text-align: center;font-family: lato;font-size: 20px"><br>ESFP</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body></html>

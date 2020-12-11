@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		
+		* {
+		  box-sizing: border-box;
+		}
+		
+		/* Create two equal columns that floats next to each other */
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 10px;
+		}
+		
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		/* Style the buttons */
+		.btn {
+		  border: none;
+		  outline: none;
+		  padding: 12px 16px;
+		  background-color: #ddd;
+		  cursor: pointer;
+		}
+		
+		.btn:hover {
+		  background-color: #ddd;
+		  color: black;
+		}
+		
+		.btn.active {
+		  background-color: #ddd;
+		  color: black;
+		}
+		/*sdfsdfdsffsfsf*/
+		* {
+		  box-sizing: border-box;
+		}
+		
+		body {
+		  background-color: #f1f1f1;
+		  padding: 20px;
+		  font-family: Arial;
+		}
+		
+		/* Center website */
+		.main {
+		  max-width: 1000px;
+		  margin: auto;
+		}
+		
+		h1 {
+		  font-size: 50px;
+		  word-break: break-all;
+		}
+		
+		.row {
+		  margin: 8px -16px;
+		}
+		
+		/* Add padding BETWEEN each column (if you want) */
+		.row,
+		.row > .column {
+		  padding: 8px;
+		}
+		
+		/* Create three equal columns that floats next to each other */
+		.column {
+		  float: left;
+		  width: 33.33%;
+		  display: none; /* Hide columns by default */
+		}
+		
+		/* Clear floats after rows */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		
+		/* Content */
+		.content {
+		  background-color: transparent;
+		  padding: 10px;
+		}
+		
+		/* The "show" class is added to the filtered elements */
+		.show {
+		  display: block;
+		}
+		
+		/* Style the buttons */
+		.btn {
+		  border: none;
+		  outline: none;
+		  padding: 12px 16px;
+		  background-color: white;
+		  cursor: pointer;
+		}
+		
+		/*  grey background color on mouse-over */
+		.btn:hover {
+		  background-color: #ddd;
+		}
+		
+		/*  dark background color to the active button */
+		.btn.active {
+		  background-color: #666;
+		   color: white;
+		}
+		.modal {
+		  display: none; /* Hidden by default */
+		  position: fixed; /* Stay in place */
+		  z-index: 1; /* Sit on top */
+		  padding-top: 100px; /* Location of the box */
+		  left: 0;
+		  top: 0;
+		  width: 100%; /* Full width */
+		  height: 100%; /* Full height */
+		  overflow: auto; /* Enable scroll if needed */
+		  background-color: rgb(0,0,0); /* Fallback color */
+		  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+		
+		/* Modal Content */
+		.modal-content {
+		  background-color: #fefefe;
+		  margin: auto;
+		  padding: 20px;
+		  border: 1px solid #888;
+		  width: 80%;
+		}
+		
+		/* The Close Button */
+		.close {
+		  color: #aaaaaa;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bold;
+		}
+		
+		.close:hover,
+		.close:focus {
+		  color: #000;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+		</style>
+<title>AMAC | I am</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Your description">
+<meta name="keywords" content="Your keywords">
+<meta name="author" content="Your name">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen">  
+<link rel="stylesheet" href="css/supersized.core.css" type="text/css" media="screen">  
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" type="text/css" href="css/styleIndex.css">
+
+<link href="https://fonts.googleapis.com/css?family=Abel|Quicksand|Pacifico|Play|Cinzel|Courgette|Lato" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/header.css">
+<link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Economica|Open+Sans+Condensed:300|Unica+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Zilla+Slab+Highlight" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Boogaloo|Cabin+Sketch|Open+Sans+Condensed:700|Zilla+Slab+Highlight" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Economica|Open+Sans+Condensed:300|Unica+One" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery.js"></script>  
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>
+
+<script type="text/javascript" src="js/supersized.core.3.2.1.js"></script>
+
+<script defer src="face-api.min.js"></script>
+<script defer src="script.js"></script>
+
+<script>
+	function myfunction() {
+			document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+$(document).ready(function() {
+	/////// icons
+	//$(".social li").find("a").css({opacity:0.6});
+	$(".social li a").hover(function() {
+		$(this).stop().animate({opacity:0.6 }, 400, 'easeOutExpo');		    
+	},function(){
+	    $(this).stop().animate({opacity:1 }, 400, 'easeOutExpo' );		   
+	}); 
+
+	
+
+}); //
+$(window).load(function() {
+	//
+
+}); //
+
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+//////
+var modal = document.getElementById("myModal");
+
+// button that opens the modal
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+//  user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+//  user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>	
+<style type="text/css">
+    .center {
+        font-family: 'Unica One', cursive;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Economica', sans-serif;
+        font-family: 'Amatic SC', cursive;
+        font-size: 80px;
+        height: 150px;
+        background-color: grey;
+    }
+
+    .person {
+        font-family: 'Unica One', cursive;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Economica', sans-serif;
+        font-family: 'Amatic SC', cursive;
+        font-weight: bold;
+        text-align: center;
+        font-size: 35px;
+    }
+
+</style>
+
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body class="subpage">
+<div id="main">
+
+<header>
+<div class="container">
+<div class="row">
+<div class="span12">
+	<div class="header_inner clearfix">
+		<div class="top1"><a href="index.html" class="logo">AMAC <span>| I Am</span></a></div>
+		<div class="top2">
+			<div class="menu_top">
+		        <ul id="menu_top" class="clearfix">
+		          <li><a href="index.html">HOME</a></li>         
+		          <li><a href="mailto:mail@companyname.com">CONTACT US</a></li>          
+		        </ul>
+			</div>
+		</div>
+	</div>
+</div>	
+</div>	
+</div>	
+</header>
+<div id="content">
+<div class="container">
+	<br><br><br>
+	<center><video id="video" width="500" height="600" autoplay muted></video></center>
+<div class="row">
+		<div id="result" align="center" style="font-family: 'Unica One', cursive;font-family: 'Unica One', cursive;font-size: 65px;color: white; font-weight: bold;"></div><br><br>
+	<hr width="102%"><br><br>
+	<div id="all" class="person"></div>
+	<div id="check" align="center" style="word-spacing: 10px; padding: 50px;line-height: 2; font-family: 'Zilla Slab Highlight', cursive;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Boogaloo', cursive;
+font-family: 'Cabin Sketch', cursive; font-size: 20px">
+
+</div>
+
+
+	<script type="text/javascript">
+		var str;
+		var final;
+		if (sessionStorage.e > sessionStorage.i) {
+			str = 'E';
+			final = "EXTROVERT - ";
+		} else {
+			str = 'I'
+			final = "INTROVERT - ";
+		}
+		if (sessionStorage.s > sessionStorage.in) {
+			str = str + 'S';
+			final = final + "SENSING - ";
+		} else {
+			str = str + 'N';
+			final = final + "INTUITION - ";
+		}
+		if (sessionStorage.t > sessionStorage.f) {
+			str = str + 'T';
+			final = final + "THINKING - ";
+		} else {
+			str = str + 'F';
+			final = final + "FEELING - ";
+		}
+		if (sessionStorage.p > sessionStorage.j) {
+			str = str + 'P';
+			final = final + "PERCEPTION - ";
+		} else {
+			str = str + 'J'
+			final = final + "JUDGING ";
+		}
+		document.getElementById("result").innerHTML = "Personality type : " + str;
+		document.getElementById("all").innerHTML = "" + final;
+
+		
+		if (str == "INTJ") {
+			document.getElementById("check").innerHTML = "It’s lonely at the top, and being one of the rarest and most strategically capable personality types, INTJs know this all too well. INTJs form just two percent of the population, and women of this personality type are especially rare, forming just 0.8% of the population – it is often a challenge for them to find like-minded individuals who are able to keep up with their relentless intellectualism and chess-like maneuvering. People with the INTJ personality type are imaginative yet decisive, ambitious yet private, amazingly curious, but they do not squander their energy.";
+		} else if (str == "INTP") {
+			document.getElementById("check").innerHTML = "The INTP personality type is fairly rare, making up only three percent of the population, which is definitely a good thing for them, as there’s nothing they’d be more unhappy about than being common. INTPs pride themselves on their inventiveness and creativity, their unique perspective and vigorous intellect. Usually known as the philosopher, the architect, or the dreamy professor, INTPs have been responsible for many scientific discoveries throughout history.";
+		} else if (str == "ENTJ") {
+			document.getElementById("check").innerHTML = "ENTJs are natural-born leaders. People with this personality type embody the gifts of charisma and confidence, and project authority in a way that draws crowds together behind a common goal. But unlike their Feeling (F) counterpart, ENTJs are characterized by an often ruthless level of rationality, using their drive, determination and sharp minds to achieve whatever end they’ve set for themselves. Perhaps it is best that they make up only three percent of the population, lest they overwhelm the more timid and sensitive personality types that make up much of the rest of the world – but we have ENTJs to thank for many of the businesses and institutions we take for granted every day.";
+		} else if (str == "ENTP") {
+			document.getElementById("check").innerHTML = "The ENTP personality type is the ultimate devil’s advocate, thriving on the process of shredding arguments and beliefs and letting the ribbons drift in the wind for all to see. Unlike their more determined Judging (J) counterparts, ENTPs don’t do this because they are trying to achieve some deeper purpose or strategic goal, but for the simple reason that it’s fun. No one loves the process of mental sparring more than ENTPs, as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base, and capacity for connecting disparate ideas to prove their points.";
+		} else if (str == "INFJ") {
+			document.getElementById("check").innerHTML = "The INFJ personality type is very rare, making up less than one percent of the population, but they nonetheles  s leave their mark on the world. As Diplomats, they have an inborn sense of idealism and morality, but what sets them apart is the accompanying Judging (J) trait – INFJs are not idle dreamers, but people capable of taking concrete steps to realize their goals and make a lasting positive impact.";
+		} else if (str == "INFP") {
+			document.getElementById("check").innerHTML = "INFP personalities are true idealists, always looking for the hint of good in even the worst of people and events, searching for ways to make things better. While they may be perceived as calm, reserved, or even shy, INFPs have an inner flame and passion that can truly shine. Comprising just 4% of the population, the risk of feeling misunderstood is unfortunately high for the INFP personality type – but when they find like-minded people to spend their time with, the harmony they feel will be a fountain of joy and inspiration.";
+		} else if (str == "ENFJ") {
+			document.getElementById("check").innerHTML = "ENFJs are natural-born leaders, full of passion and charisma. Forming around two percent of the population, they are oftentimes our politicians, our coaches and our teachers, reaching out and inspiring others to achieve and to do good in the world. With a natural confidence that begets influence, ENFJs take a great deal of pride and joy in guiding others to work together to improve themselves and their community.";
+		} else if (str == "ENFP") {
+			document.getElementById("check").innerHTML = "The ENFP personality is a true free spirit. They are often the life of the party, but unlike Explorers, they are less interested in the sheer excitement and pleasure of the moment than they are in enjoying the social and emotional connections they make with others. Charming, independent, energetic and compassionate, the 7% of the population that they comprise can certainly be felt in any crowd.";
+		} else if (str == "ISTJ") {
+			document.getElementById("check").innerHTML = "The ISTJ personality type is thought to be the most abundant, making up around 13% of the population. Their defining characteristics of integrity, practical logic and tireless dedication to duty make ISTJs a vital core to many families, as well as organizations that uphold traditions, rules and standards, such as law offices, regulatory bodies and military. People with the ISTJ personality type enjoy taking responsibility for their actions, and take pride in the work they do – when working towards a goal, ISTJs hold back none of their time and energy completing each relevant task with accuracy and patience.";
+		} else if (str == "ISFJ") {
+			document.getElementById("check").innerHTML = "The ISFJ personality type is quite unique, as many of their qualities defy the definition of their individual traits. Though possessing the Feeling (F) trait, ISFJs have excellent analytical abilities; though Introverted (I), they have well-developed people skills and robust social relationships; and though they are a Judging (J) type, ISFJs are often receptive to change and new ideas. As with so many things, people with the ISFJ personality type are more than the sum of their parts, and it is the way they use these strengths that defines who they are.";
+		} else if (str == "ESTJ") {
+			document.getElementById("check").innerHTML = "ESTJs are representatives of tradition and order, utilizing their understanding of what is right, wrong and socially acceptable to bring families and communities together. Embracing the values of honesty, dedication and dignity, people with the ESTJ personality type are valued for their clear advice and guidance, and they happily lead the way on difficult paths. Taking pride in bringing people together, ESTJs often take on roles as community organizers, working hard to bring everyone together in celebration of cherished local events, or in defense of the traditional values that hold families and communities together.";
+		} else if (str == "ESFJ") {
+			document.getElementById("check").innerHTML = "People who share the ESFJ personality type are, for lack of a better word, popular – which makes sense, given that it is also a very common personality type, making up twelve percent of the population. In high school, ESFJs are the cheerleaders and the quarterbacks, setting the tone, taking the spotlight and leading their teams forward to victory and fame. Later in life, ESFJs continue to enjoy supporting their friends and loved ones, organizing social gatherings and doing their best to make sure everyone is happy.";
+		} else if (str == "ISTP") {
+			document.getElementById("check").innerHTML = "ISTPs love to explore with their hands and their eyes, touching and examining the world around them with cool rationalism and spirited curiosity. People with this personality type are natural Makers, moving from project to project, building the useful and the superfluous for the fun of it, and learning from their environment as they go. Often mechanics and engineers, ISTPs find no greater joy than in getting their hands dirty pulling things apart and putting them back together, just a little bit better than they were before.";
+		} else if (str == "ISFP") {
+			document.getElementById("check").innerHTML = "ISFP personality types are true artists, but not necessarily in the typical sense where they’re out painting happy little trees. Often enough though, they are perfectly capable of this. Rather, it’s that they use aesthetics, design and even their choices and actions to push the limits of social convention. ISFPs enjoy upsetting traditional expectations with experiments in beauty and behavior – chances are, they’ve expressed more than once the phrase .";
+		} else if (str == "ESTP") {
+			document.getElementById("check").innerHTML = "ESTP personality types always have an impact on their immediate surroundings – the best way to spot them at a party is to look for the whirling eddy of people flitting about them as they move from group to group. Laughing and entertaining with a blunt and earthy humor, ESTP personalities love to be the center of attention. If an audience member is asked to come on stage, ESTPs volunteer – or volunteer a shy friend.";
+		} else if (str == "ESFP") {
+			document.getElementById("check").innerHTML = "If anyone is to be found spontaneously breaking into song and dance, it is the ESFP personality type. ESFPs get caught up in the excitement of the moment, and want everyone else to feel that way, too. No other personality type is as generous with their time and energy as ESFPs when it comes to encouraging others, and no other personality type does it with such irresistible style.";
+		}
+
+	</script>
+	<div class="details"></div>
+	<a href="desc.html">
+		<center><button style="background-color:transparent; font-size: 20px; color:white; border: none;">CHECK OUT OTHER PERSONALITIES</button><br><a style="font-size: 15px;">Click on here.</a></center>
+	</a><br><br>
+</div>	
+</div>	
+</div>
+<!--Job suggestion-->
+
+<div id="content">
+	<div class="container">
+	<div class="row">
+		<div class="span12">
+	
+			
+	
+			<h2>Suggestion Jobs</h2>
+			
+			<div id="myBtnContainer">
+			  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			  <button class="btn" onclick="filterSelection('INTJ')">The Architect</button>
+			  <button class="btn" onclick="filterSelection('ISTJ')">The Inspector</button>
+			  <button class="btn" onclick="filterSelection('ENFJ')">The Giver</button>
+			  <button class="btn" onclick="filterSelection('ENFP')">The Campion</button>
+			  <button class="btn" onclick="filterSelection('ENTJ')">The Commander</button>
+			  <button class="btn" onclick="filterSelection('ENTP')">The Debater</button>
+			  <button class="btn" onclick="filterSelection('ESFJ')">The Caregiver</button>
+			  <button class="btn" onclick="filterSelection('ESFP')">The Performer</button>
+			  <button class="btn" onclick="filterSelection('ESTJ')">The Director</button>
+			  <button class="btn" onclick="filterSelection('ESTP')">The Persuader</button>
+			  <button class="btn" onclick="filterSelection('INFJ')">The Advocate</button>
+			  <button class="btn" onclick="filterSelection('INFP')">The Mediator</button>
+			  <button class="btn" onclick="filterSelection('INTP')">The Thinker</button>
+			  <button class="btn" onclick="filterSelection('ISFJ')">The Protector</button>
+			  <button class="btn" onclick="filterSelection('ISFP')">The Artist</button>
+			  <button class="btn" onclick="filterSelection('ISTP')">The Crafter</button>
+	
+			</div>
+			
+			<!-- Portfolio Gallery Grid -->
+			<div class="row">
+				<div class="column INTJ">
+					<div class="content ">
+					  <a href="https://g.co/kgs/vaXxAE"><img src="JobSuggest/architect.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					  <h4><a href="https://g.co/kgs/vaXxAE">Software Architect</a></h4>
+					</div>
+					
+				  </div>
+	
+			  <div class="column INTJ">
+				<div class="content ">
+					<a href="https://g.co/kgs/w5LtWL"><img src="JobSuggest/architect (1).jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/w5LtWL">IT Platform Architect</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column INTJ">
+				<div class="content">
+				  <a href="https://g.co/kgs/45zRUD"><img src="JobSuggest/Archiect_opt.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+				  <h4><a href="https://g.co/kgs/45zRUD">BIG DATA ARCHITECT</a></h4>
+				  
+				</div>
+			  </div>
+			<!-- Portfolio Gallery Grid -->
+			  <div class="column ISTJ">
+				<div class="content ">
+					<a href="https://g.co/kgs/49eWXx"><img src="JobSuggest/analyst1.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/49eWXx">Trainee Financial Analyst</a></h4>
+				</div>
+			  </div>
+			  <div class="column ISTJ">
+				<div class="content">
+					<a href="https://g.co/kgs/97jr2q"><img src="JobSuggest/analyst2.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/97jr2q">R&C-Business Analyst-CMB</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ISTJ">
+				<div class="content">
+					<a href="https://g.co/kgs/eq9RN5"><img src="JobSuggest/analyst3.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/eq9RN5">TSenior / Lead Analyst</a></h4>
+				</div>
+			  </div>
+			<!-- Portfolio Gallery Grid -->
+			  <div class="column ENFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/MXi23P"><img src="JobSuggest/HR1.png" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/MXi23P">Human Resource Manager</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ENFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/icMBbF"><img src="JobSuggest/HR2.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/icMBbF">Deputy Manager - Human Resources</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ENFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/Aq3qEk"><img src="JobSuggest/HR3.png" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/Aq3qEk">Executive – Human Resources</a></h4>
+				  
+				</div>
+			  </div>
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column ENFP">
+				<div class="content">
+					<a href="https://g.co/kgs/f6njj6"><img src="JobSuggest/Design2.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/f6njj6">Graphic Designer</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ENFP">
+				<div class="content">
+					<a href="https://g.co/kgs/LndFaV"><img src="JobSuggest/Design3.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/LndFaV">Intern – Graphics Designer</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ENFP">
+				<div class="content">
+					<a href="https://g.co/kgs/8Hd6oc"><img src="JobSuggest/DesignUX.jfif" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/8Hd6oc">UX Designer</a></h4>
+				  
+				</div>
+			  </div>
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column ENTJ">
+				<div class="content">
+					<a href="https://g.co/kgs/KyzJfT"><img src="JobSuggest/Acc01.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/KyzJfT">Assistant Accountant</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ENTJ">
+				<div class="content">
+					<a href="https://g.co/kgs/uVtbuq"><img src="JobSuggest/Acc02.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/uVtbuq">Accountant</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ENTJ">
+				<div class="content">
+					<a href="https://g.co/kgs/tEUs2T"><img src="JobSuggest/Acc03.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/tEUs2T">Assistant Accountant / Accountant</a></h4>
+				  
+				</div>
+			  </div>
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column ENTP">
+				<div class="content">
+					<a href="https://g.co/kgs/KGJikC"><img src="JobSuggest/Ad.Manger1.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/KGJikC">Digital Media Marketing Manager</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ENTP">
+				<div class="content">
+					<a href="https://g.co/kgs/2S3GtL"><img src="JobSuggest/Ad.Manger2.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/2S3GtL">Assistant Brand Manager</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ENTP">
+				<div class="content">
+					<a href="https://g.co/kgs/5hy3Fh"><img src="JobSuggest/Ad.Manger3.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/5hy3Fh">Brand Manager</a></h4>
+				  
+				</div>
+			  </div>
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column ESFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/2r8fuA"><img src="JobSuggest/Care1.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/2r8fuA">Senior Caregiver </a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ESFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/L4TgJS"><img src="JobSuggest/Care02.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/L4TgJS">Kids Art Teacher</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ESFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/QRqETF"><img src="JobSuggest/Care03.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/QRqETF">Student Counselor</a></h4>
+				
+				</div>
+			  </div>
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column ESFP">
+				<div class="content">
+					<a href="https://g.co/kgs/5Dkc7f"><img src="JobSuggest/nurse1.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/5Dkc7f">Nursing Assistant</a></h4>
+					   
+				</div>
+			  </div>
+			  <div class="column ESFP">
+				<div class="content">
+					<a href="https://g.co/kgs/jvX6Gy"><img src="JobSuggest/nurse2.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/jvX6Gy">Occupational Health Nurse</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ESFP">
+				<div class="content">
+					<a href="https://g.co/kgs/ByW4Zj"><img src="JobSuggest/nurse3.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/ByW4Zj">Nursery Teachers</a></h4>
+				 
+				</div>
+			  </div>
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column ESTJ">
+				<div class="content">
+					<a href="https://g.co/kgs/fyZ84j"><img src="JobSuggest/insurance1.png" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/fyZ84j">Insurance Agent </a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ESTJ">
+				<div class="content">
+					<a href="https://g.co/kgs/PJ7BrP"><img src="JobSuggest/insurance2.png" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/PJ7BrP">Sales Manager / Sales Executive</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ESTJ">
+				<div class="content">
+					<a href="https://g.co/kgs/vNrQ9i"><img src="JobSuggest/insurance3.png" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/vNrQ9i">Hotel Manager</a></h4>
+				 
+				</div>
+			  </div>
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column ESTP">
+				<div class="content">
+					<a href="https://g.co/kgs/t9q72Q"><img src="JobSuggest/sav01.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/t9q72Q">Assistant Quantity Surveyor </a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ESTP">
+				<div class="content">
+					<a href="https://g.co/kgs/aVuSRY"><img src="JobSuggest/sav02.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/aVuSRY">Automotive Mechanic</a></h4>
+				 
+				</div>
+			  </div>
+			  <div class="column ESTP">
+				<div class="content">
+					<a href="https://g.co/kgs/kL19z4"><img src="JobSuggest/sav03.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/kL19z4">Carpenter</a></h4>
+				  
+				</div>
+			  </div>
+			   <!-- Portfolio Gallery Grid -->
+			  <div class="column INFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/jKh4Tx"><img src="JobSuggest/health1.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/jKh4Tx">Mental Health Placement</a></h4>
+					
+				</div>
+			  </div>
+			  <div class="column INFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/iAGpKi"><img src="JobSuggest/health2.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/iAGpKi">Content Writer</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column INFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/kk1zrJ"><img src="JobSuggest/health3.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/kk1zrJ">Librarian</a></h4>
+				  
+				</div>
+			  </div>
+	
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column INFP">
+				<div class="content">
+					<a href="https://g.co/kgs/ADRxDw"><img src="JobSuggest/fashion1.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/ADRxDw">Fashion Designer</a></h4>
+				 
+				</div>
+			  </div>
+			  <div class="column INFP">
+				<div class="content">
+					<a href="https://g.co/kgs/uKhWQL"><img src="JobSuggest/fashion2.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/uKhWQL">Video Editor</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column INFP">
+				<div class="content">
+					<a href="https://g.co/kgs/ETQfUS"><img src="JobSuggest/fashion3.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/ETQfUS">Translator</a></h4>
+				  
+				</div>
+			  </div>
+	
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column INTP">
+				<div class="content">
+					<a href="https://g.co/kgs/yqBnka"><img src="JobSuggest/soft01.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/yqBnka">Associate Software Engineer</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column INTP">
+				<div class="content">
+					<a href="https://g.co/kgs/YYgvBc"><img src="JobSuggest/soft02.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/YYgvBc">Game Designer</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column INTP">
+				<div class="content">
+					<a href="https://g.co/kgs/eq9RN5"><img src="JobSuggest/soft03.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/eq9RN5">Journalists</a></h4>
+				  
+				</div>
+			  </div>
+	
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column ISFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/QVXnfV"><img src="JobSuggest/keep1.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/QVXnfV">Bookkeeper - Full Time</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ISFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/GjA2nv"><img src="JobSuggest/keep2.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/GjA2nv">Administrative Assistant</a></h4>
+					
+				</div>
+			  </div>
+			  <div class="column ISFJ">
+				<div class="content">
+					<a href="https://g.co/kgs/YCfUbu"><img src="JobSuggest/keep3.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/YCfUbu">Assistant Legal Officer</a></h4>
+				  
+				</div>
+			  </div>
+	
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column ISFP">
+				<div class="content">
+					<a href="https://g.co/kgs/NY3x4z"><img src="JobSuggest/ani01.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/NY3x4z">3D Animator</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ISFP">
+				<div class="content">
+					<a href="https://g.co/kgs/nGecNM"><img src="JobSuggest/ani02.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/nGecNM">Landscape Architects</a></h4>
+				
+				</div>
+			  </div>
+			  <div class="column ISFP">
+				<div class="content">
+					<a href="https://g.co/kgs/fMgdBY"><img src="JobSuggest/ani03.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/fMgdBY">Pastry Chef</a></h4>
+				  
+				</div>
+			  </div>
+			  <!-- Portfolio Gallery Grid -->
+			  <div class="column ISTP">
+				<div class="content">
+					<a href="https://g.co/kgs/RTGXmB"><img src="JobSuggest/far1.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/RTGXmB">Executive - Farmer Connect</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ISTP">
+				<div class="content">
+					<a href="https://g.co/kgs/3Emknq"><img src="JobSuggest/far2.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/3Emknq">Site Inspection Officer</a></h4>
+				  
+				</div>
+			  </div>
+			  <div class="column ISTP">
+				<div class="content">
+					<a href="https://g.co/kgs/ghdto8"><img src="JobSuggest/far3.jpg" alt="HTML tutorial" style="width:300px;height:200px;"></a>
+					<h4><a href="https://g.co/kgs/ghdto8">Junior Graphic Designer</a></h4>
+				  
+				</div>
+			  </div>
+			<!-- END GRID -->
+			</div>
+			
+	
+		
+	
+	
+		</div>
+	
+		</div>
+	</div>	
+	</div>
+
+<div class="container">
+<div class="row">
+<div class="span12">
+	<footer class="clearfix">
+		
+		<div class="bot1">Call us: <span>+94719451383</span></div>
+		<div class="bot2 clearfix">
+			<div class="txt1">follow us:</div>
+			<div class="social_wrapper">
+				<ul class="social clearfix">
+				    <li><a href="#"><img src="images/social_ic1.jpg" alt="#"></a></li>
+				    <li><a href="#"><img src="images/social_ic2.jpg" alt="#"></a></li>
+				    <li><a href="#"><img src="images/social_ic3.jpg" alt="#"></a></li>
+				    <li><a href="#"><img src="images/social_ic4.jpg" alt="#"></a></li>
+				    <li><a href="#"><img src="images/social_ic5.jpg" alt="#"></a></li>
+				    <li><a href="#"><img src="images/social_ic6.jpg" alt="#"></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<div class="copyright">
+		Copyright © 2013.All rights reserved.  |    <a href="#">Privacy Policy</a>
+	</div>
+</div>	
+</div>	
+</div>
+
+
+
+
+
+</div>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>
